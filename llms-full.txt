@@ -1,0 +1,501 @@
+# designmd.app — Full Reference
+
+> Open reference of documented DESIGN.md files for AI coding agents.
+
+## What is DESIGN.md
+A Markdown file with YAML front matter that combines machine-readable design tokens (colors, typography, spacing, rounded, components) with human-readable design rationale prose. Open-source format maintained by Google (github.com/google-labs-code/design.md). Introduced by Google Stitch in March 2026. The agent reads it from the project root and applies visual rules consistently across all generated UI.
+
+## Format structure
+- Two layers: YAML front matter (tokens) + Markdown body (prose)
+- Token types: Color (#hex sRGB), Dimension (px/em/rem), Typography (object), Token Reference ({path.to.token})
+- 8 sections in canonical order: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts
+- Official CLI: npx @google/design.md lint|diff|export|spec
+- Interoperability: export to Tailwind theme config and DTCG tokens.json (W3C)
+
+## Site sections
+- https://designmd.app/library — Documented DESIGN.md files by vertical and style, ready to copy
+- https://designmd.app/what-is-design-md — Complete technical reference on the format and official specification
+- https://designmd.app/guides — Agent-specific setup: Claude Code, Cursor, Kiro, Windsurf, Google Stitch
+- https://designmd.app/for — DESIGN.md patterns by industry vertical (SaaS, e-commerce, fintech, etc.)
+- https://designmd.app/blog — Technical articles on DESIGN.md, design systems for AI, vibe coding
+- https://designmd.app/skills — AI agent skills (SKILL.md modules) by ft.ia.br
+
+## Key technical details
+- Format: Markdown + YAML front matter (machine-readable tokens)
+- Sections: Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components, Do's and Don'ts
+- Token schema: colors, typography, rounded, spacing, components (with cross-references {path.to.token})
+- Validation: npx @google/design.md lint (broken-ref, contrast-ratio, missing-primary, orphaned-tokens, section-order)
+- Compatibility: any agent that reads project files (Claude Code, Cursor, Kiro, Windsurf, Stitch)
+- Purpose: persistent visual context that prevents inconsistent AI-generated UI
+
+## Library catalog (454 DESIGN.md files)
+- 3D & Hyperrealism: Build an immersive 3D interface using realistic textures, 3D models (Three.js/Babylon.js), complex shadows, realistic lighting, parallax scrolling (3-5 layers), physics-based motion. Ideal for premium e-commerce, real estate, automotive, immersive education. AI-ready template.
+- 3D Product Preview: 3D product preview interface. Ideal for landing pages, saas. AI-ready template.
+- 3x3 Grid Design: 3x3 grid-based landing page where content is organized in nine uniform boxes. Ideal for feeds de instagram, moodboards, portfólios, design de vestuário/boutiques. AI-ready template.
+- 70s Psychedelic Flower Power: 70s landing page, psychedelic style, flower power, groovy font, wavy lines, bright retro colors, hippie aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- 8-Bit Orbit: 8-Bit Orbit — Pixel-art neon arcade aesthetic on a deep navy void. Tektur typography. deep navy/black void with neon pink, cyan, and yellow pops. Best for gaming pitch, hackathon demo, web3 / crypto deck. AI-ready design system.
+- 8-Bit Retro Terminal: 8-bit landing page, retro terminal style, pixel art, green phosphor text, scanlines, arcade game aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- 90s Retro Video Game: 90s/Y2K retro video game style landing page. Ideal for games indie, projetos nostálgicos, marketing y2k, streaming, comunidades gamer. AI-ready template.
+- Acanthus: Landing page inspired by acanthus leaf patterns from Greek and Roman architecture. Ideal for detalhes arquitetônicos, tipografia sofisticada, layouts de impressão elegantes, museums. AI-ready template.
+- Accessible & Ethical: Design with WCAG AAA compliance. Ideal for government, healthcare, education, qualquer site inclusivo. AI-ready template.
+- Afrofuturismo Digital: Design an Afrofuturist digital landing page. Ideal for landing pages, saas. AI-ready template.
+- Agency Viral Videos & Reels Hero: High-impact full-screen hero section for a viral video agency. Ideal for agências de vídeo, produtoras de conteúdo, marketing de reels, creative agencies, social media agencies. AI-ready template.
+- AI Automation Hero: Design an AI hero with dark purple-black background #070612. Ideal for plataformas de ai, automação de workflows, produtos de machine learning, startups de inteligência artificial. AI-ready template.
+- AI-Native UI: Design an AI-native interface. Ideal for landing pages, saas. AI-ready template.
+- Airbnb Coral Marketplace: Design an Airbnb-inspired warm marketplace landing page. Ideal for marketplaces, viagens, plataformas de hospedagem, e-commerce experiencial. AI-ready template.
+- Albert Sans Typography: Render a 2D isolated text on a solid background. Ideal for startups, lifestyle brands, landing pages, and simple marketing sites.. AI-ready template.
+- Amazônia Futurista: Futuristic Amazon rainforest landing page. Ideal for landing pages tech, projetos sustentáveis, sites futuristas. AI-ready template.
+- American Diner Americana: American diner landing page, 50s retro style, mint green and red, checkerboard pattern, chrome typography, neon signs, nostalgic. Ideal for landing pages, modern websites. AI-ready template.
+- Analytics Metric Flow: Design uma landing page analytics SaaS em scroll contínuo: hero fullscreen com headline 'Every number that matters. Ideal for saas analytics, dashboards de métricas, plataformas de dados, ferramentas de integração. AI-ready template.
+- Ancient Egyptian / Historical: Design an Ancient Egyptian historical interface. Ideal for landing pages, saas. AI-ready template.
+- Ancient Egyptian Instructional Scroll: Ancient egypt landing page, papyrus scroll background, hieroglyphics design, gold and lapis lazuli, flat profile art, historical aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Anime Battle: Design an anime battle-style landing page with intense, dynamic energy. Ideal for games, esports, entertainment, fan sites, streaming de anime. AI-ready template.
+- Anthropomorphic: Whimsical anthropomorphic-themed landing page with playful character-driven aesthetics. Ideal for livros infantis, mascotes de marcas, campanhas lúdicas, embalagens de produtos vintage. AI-ready template.
+- Anti-Polish / Raw Aesthetic: Design with anti-polish raw aesthetic. Ideal for landing pages, saas. AI-ready template.
+- Apple Premium Cinematic: Premium Apple-style landing page with binary light/dark section rhythm. Ideal for produtos premium, technology, eletrônicos, marcas de luxo. AI-ready template.
+- Aprendizado Criativo Artesanal: Creative and engaging hand-drawn landing page for an online art and creativity course platform. Ideal for landing pages, modern websites. AI-ready template.
+- Architectural Portfolio Cinematic: High-end cinematic 2-page architectural portfolio. Ideal for portfolios de arquitetura, estúdios de design, creative agencies, portfolios pessoais premium, showcases de projetos tech. AI-ready template.
+- Architectural Schematic: Architectural landing page, schematic design, floor plan style, technical drawing, clean lines, dimension markers, white background. Ideal for landing pages, modern websites. AI-ready template.
+- Arctic Forsythia Premium: Fresh, minimal, and luminous UI inspired by Scandinavian design. Ideal for saas moderno, fintechs, apps de produtividade, startups de tecnologia, plataformas de saúde digital. AI-ready template.
+- Art Deco: Design an Art Deco landing page with elegant glamour from the 1920s-30s. Ideal for embalagens de luxo, bares de cocktails, hotéis, interiores com toque great gatsby. AI-ready template.
+- Art Deco / Golden Age: Design an Art Deco / Golden Age interface. Ideal for landing pages, saas. AI-ready template.
+- Art Nouveau: Design an Art Nouveau landing page with flowing organic lines and nature-inspired motifs. Ideal for design de pôsteres, capas de livros, branding orgânico e romântico, ilustração editorial. AI-ready template.
+- Art Nouveau Florido: Design an Art Nouveau floral landing page. Ideal for landing pages, saas. AI-ready template.
+- Artesanato Orgânico e Acolhedor: Design an organic and warm hand-drawn landing page for an online craft store. Ideal for landing pages, modern websites. AI-ready template.
+- Aura Premium WebGL & Iconify: Premium dark-themed landing page with advanced animations and interactions. Ideal for portfolios de luxo, estúdios de arquitetura, marcas premium, móveis de alto padrão, wellness premium, creative agencies. AI-ready template.
+- Aurora: Design an aurora-inspired landing page with dreamy multi-color gradients mimicking the northern lights. Ideal for branding moderno, ui/ux, web design, digital art, temas cósmicos e mágicos. AI-ready template.
+- Aurora Boreal Nórdica: Nordic aurora borealis landing page. Ideal for landing pages, saas. AI-ready template.
+- Aurora UI: Vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Ideal for saas premium, creative tools, agência moderna, brand exclusiva. AI-ready template.
+- Azulejaria Digital Moderna: Geometric and modular landing page for a collaborative digital art platform, inspired by Brazilian modernist azulejaria. Ideal for landing pages, saas. AI-ready template.
+- Azulejo Português: Portuguese azulejo landing page. Ideal for landing pages, saas. AI-ready template.
+- Baroque: Baroque-inspired landing page with dramatic contrasts, rich deep colors (crimson, gold, black), ornate decorative borders, gold leaf accents, theatrical lighting via radial gradients. Ideal for branding de eventos de luxo, layouts editoriais, embalagens elegantes, convites premium. AI-ready template.
+- Bauhaus: Bauhaus-inspired landing page with strict primary colors and bold geometric shapes. Ideal for identidade de marca, layouts em grade para editorial, web design geométrico, pôsteres. AI-ready template.
+- Bauhaus / Risograph Modern: Bauhaus risograph modern interface. Ideal for landing pages, saas. AI-ready template.
+- Belle Époque Lithograph: Belle epoque landing page, art nouveau style, alphonse mucha aesthetic, lithograph texture, floral borders, vintage elegance, pastel colors. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Box Grid: Bento Box grid layout. Ideal for landing pages, saas. AI-ready template.
+- Bento Dados Estruturados: Data-driven and organized Bento Style landing page for a data analysis dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Eventos Dinâmicos: Dynamic and organized Bento Style landing page for an event and ticketing platform. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Grid: Bento Grid landing page inspired by Japanese bento boxes and Apple's design language. Ideal for ui/ux, dashboards, portfólios, web design limpo, branding de produtos apple. AI-ready template.
+- Bento Grid Tech Minimalist: Bento grid landing page, apple style aesthetic, modular layout, rounded cards, clean minimalist tech, organized grid system. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Grids: Bento Grid layout. Ideal for landing pages, saas. AI-ready template.
+- Bento Notícias Curadas: Personalized and organized Bento Style landing page for a curated news platform. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Portfólio de Produto: Visual and organized Bento Style landing page for a product designer portfolio. Ideal for landing pages, modern websites. AI-ready template.
+- Bento Produtividade Flexível: Modular and organized Bento Style landing page for a customizable productivity platform. Ideal for landing pages, modern websites. AI-ready template.
+- Biennale Yellow: Biennale Yellow — Solar yellow on warm parchment with deep indigo serif and atmospheric sun-glow gradients. Instrument Serif typography. warm parchment ground with a signature solar-yellow accent, deep indigo navy ink. Best for exhibition or biennale, arts institution programme, design or typography conference. AI-ready design system.
+- Biomimetic / Organic 2.0: Biomimetic organic interface. Ideal for landing pages, saas. AI-ready template.
+- BlockFrame: BlockFrame — Neobrutalist deck with pastel-neon color blocks and chunky black borders. Space Grotesk typography. off-white background with neon pastel blocks (hot pink, sky blue, lime green, go. Best for creative agency pitch, indie SaaS launch, designer portfolio. AI-ready design system.
+- Blue Professional: Blue Professional — Cream paper background with electric cobalt blue accents; clean modern professional. Space Grotesk typography. warm cream paper background with one electric cobalt blue accent. Best for B2B SaaS pitch, consulting deliverable, internal review. AI-ready design system.
+- Blueprint / Engineering: Blueprint engineering interface. Ideal for landing pages, saas. AI-ready template.
+- BMW Angular Precision: BMW-inspired angular precision landing page. Ideal for automotivo de luxo, engenharia, marcas premium, produtos industriais. AI-ready template.
+- Bohemian (Boho): Bohemian landing page with vibrant yet muted earthy tones. Ideal for branding de eventos, linhas de moda, produtos lifestyle, marcas de viagem. AI-ready template.
+- Bold & Energetic: Bold and energetic poster-style interface using 60/30/10 color balance. Ideal for design de pôsteres, eventos e festivais, campanhas promocionais, landing pages de lançamento, conteúdo social de alto impacto. AI-ready template.
+- Bold Portfolio Hero: Bold portfolio hero with vertical gradient from red-orange #fd2601 to orange #f37e1c. Ideal for creative portfolios, designers freelancer, agências de branding, sites pessoais de artistas. AI-ready template.
+- Bold Poster: Bold Poster — Editorial poster aesthetic with massive Shrikhand display and a single fire-engine red accent. Shrikhand typography. white and warm-cream paper with deep almost-black ink, lifted by a single satura. Best for brand manifesto, creative-led pitch, magazine / editorial. AI-ready design system.
+- Bold Signal: Bold, confident dark landing page. Ideal for creative agencies, startups tech, portfolios de design, apresentações corporativas. AI-ready template.
+- Bossa Nova Lounge: Bossa Nova lounge style landing page. Ideal for landing pages musicais, projetos culturais, sites sofisticados. AI-ready template.
+- Broadside: Broadside — Dark editorial canvas with a single fire orange accent and bilingual Latin/Chinese type stack. Barlow typography. near-black newspaper canvas with warm cream text and a single fire-orange headli. Best for brand manifesto, founder vision deck, magazine / cultural pitch. AI-ready design system.
+- Brutalism: Brutalist landing page with raw, stark, intentionally unpolished aesthetics. Ideal for streetwear, marcas experimentais, layouts editoriais, portfólios de design. AI-ready template.
+- Brutalism: Brutalist design with raw, unpolished, stark aesthetic. Ideal for creative portfolio, design agency, experimental blog, digital art. AI-ready template.
+- Brutalismo Artístico Abstrato: Design an artistic and experimental brutalist landing page for a digital artist portfolio. Ideal for landing pages, modern websites. AI-ready template.
+- Brutalismo Sonoro Glitch: Design an edgy and raw brutalist landing page for an experimental electronic music festival. Ideal for landing pages, modern websites. AI-ready template.
+- Brutalismo Urbano Expressivo: Design an edgy and expressive brutalist landing page for an urban art and streetwear store. Ideal for landing pages, modern websites. AI-ready template.
+- Brutalist Web Design: Brutalist web landing page. Ideal for landing pages, saas. AI-ready template.
+- CAD-Inspired Blueprint: CAD landing page style, blueprint aesthetic, dark blue background, white technical lines, mechanical details, engineering look. Ideal for landing pages, modern websites. AI-ready template.
+- Café Artesanal Aconchegante: Cozy and rustic hand-drawn landing page for an artisanal coffee shop and bakery. Ideal for landing pages, modern websites. AI-ready template.
+- Capsule: Capsule — Modular pill-shaped cards on warm bone with a full pastel-pop palette. Bodoni Moda typography. warm bone background, ink-black structure, and a full pastel-pop palette (coral,. Best for lifestyle brand, creator portfolio, DTC product launch. AI-ready design system.
+- Caramelo Quente Premium: Warm, inviting, and artisanal UI with a premium feel. Ideal for cafeterias artesanais, padarias premium, marcas de lifestyle, restaurantes acolhedores, e-commerce de produtos naturais. AI-ready template.
+- Cartazista de Supermercado: Brazilian supermarket cartazista (sign maker) style landing page. Ideal for landing pages, saas. AI-ready template.
+- Cartesian: Cartesian — Quiet warm-neutral palette with classical Playfair serifs; tasteful and unhurried. Playfair Display typography. warm bone and stone neutrals only. Best for investment thesis, white paper, advisory deliverable. AI-ready design system.
+- Cassette Futurism: Cassette futurism landing page. Ideal for landing pages, saas. AI-ready template.
+- Cerâmica Wabi-Sabi: Wabi-Sabi ceramic landing page. Ideal for landing pages, saas. AI-ready template.
+- Cerrado Minimalista: Cerrado (Brazilian savanna) minimalist landing page. Ideal for landing pages sustentáveis, projetos ecológicos, sites minimalistas. AI-ready template.
+- Chalkboard: Chalkboard-style landing page. Ideal for education, tutoriais, restaurants, projetos nostálgicos, menus criativos. AI-ready template.
+- Chalkboard / Hand-Drawn: Chalkboard hand-drawn interface. Ideal for landing pages, saas. AI-ready template.
+- Chalkboard Sketch-Note: Chalkboard landing page, blackboard background, hand drawn chalk style, white sketch on dark, educational aesthetic, doodle icons. Ideal for landing pages, modern websites. AI-ready template.
+- Chromatic Aberration / RGB Split: Design with chromatic aberration RGB split effect. Ideal for landing pages, saas. AI-ready template.
+- Circuit Board / PCB: Circuit board PCB interface. Ideal for landing pages, saas. AI-ready template.
+- Claude Warm Parchment: Warm editorial landing page inspired by Claude/Anthropic. Ideal for plataformas de ia, education, editoras, produtos literários. AI-ready template.
+- Clay Artisanal Swatch: Clay-inspired artisanal landing page. Ideal for b2b criativo, agências, plataformas de dados, ferramentas de enriquecimento. AI-ready template.
+- Claymation 3D: Claymation 3D interface. Ideal for landing pages, saas. AI-ready template.
+- Claymation 3D Illustration: Claymation landing page, plasticine style, 3d clay illustration, soft lighting, rounded shapes, cute and friendly, stop motion aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Claymorphism: Playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Ideal for apps infantis, creative tools, education, jogos interativos. AI-ready template.
+- ClearInvoice SaaS Hero: SaaS hero with HLS background video at full opacity no overlay. Ideal for saas de faturamento, plataformas de billing, ferramentas de pagamento, gestão financeira. AI-ready template.
+- ClickHouse Neon Volt: ClickHouse-inspired neon performance landing page. Ideal for databases, analytics em tempo real, infraestrutura de dados, data warehouses. AI-ready template.
+- Coastal Commerce: Coastal-inspired e-commerce UI using navy, driftwood beige, and pale ocean blues. Ideal for e-commerce de moda praia, lojas de surf e lifestyle, produtos artesanais costeiros, decoração náutica. AI-ready template.
+- Coastal Mist: Serene coastal UI using deep navy, pale seafoam, and soft slate blues. Ideal for saas de bem-estar, apps de meditação, turismo costeiro, imobiliárias de praia, clínicas e spas. AI-ready template.
+- Coastal Studio: Creative studio landing page inspired by rocky coastal cliffs, using deep navy, slate blue, and ocean pearl overlays. Ideal for portfólios de fotografia, estúdios criativos, agências de branding, arquitetura costeira. AI-ready template.
+- Cobalt Grid: Cobalt Grid — Electric cobalt italic serifs on a graph-paper canvas, anchored by stair-stepped pixel-glitch decorations and slim hairline rules. Newsreader (italic) typography. warm cream / ivory paper canvas with one strict accent of electric cobalt royal . Best for design trend or research report, studio annual or seasonal bulletin, creative agency capabilities deck. AI-ready design system.
+- Cohere Enterprise Serif: Cohere-inspired enterprise landing page. Ideal for enterprise ai, infraestrutura de dados, plataformas b2b, apis corporativas. AI-ready template.
+- Coinbase Trust Blue: Coinbase-inspired clean fintech landing page. Ideal for exchanges crypto, fintechs, plataformas financeiras, wallets digitais. AI-ready template.
+- Comic Book / Pop Art: Comic book pop art interface. Ideal for landing pages, saas. AI-ready template.
+- Comparative Analysis Dashboard: Comparison dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Composio Cyber Nocturnal: Composio-inspired nocturnal landing page. Ideal for integrações de ferramentas, apis, plataformas developer, automação de agentes. AI-ready template.
+- Conceptual Sketch / Doodle Art: Doodle art landing page with hand-drawn, sketch-like aesthetics. Ideal for branding lúdico, creative agencies, produtos para público jovem, editoriais divertidos. AI-ready template.
+- Conforto Artesanal Brasileiro: Warm and authentic landing page for an online store of handmade Brazilian furniture, inspired by Sérgio Rodrigues and Irmãos Campana. Ideal for landing pages, saas. AI-ready template.
+- Construtivismo Arquitetônico: Precise and structured constructivist landing page for a modern architecture firm. Ideal for landing pages, modern websites. AI-ready template.
+- Construtivismo de Dados Dinâmicos: Data-driven and dynamic constructivist landing page for a business intelligence platform. Ideal for landing pages, modern websites. AI-ready template.
+- Construtivismo de Eventos Dinâmicos: Design an energetic and innovative constructivist landing page for a design and innovation conference. Ideal for landing pages, modern websites. AI-ready template.
+- Construtivismo Dinâmico Tech: Functional and dynamic constructivist landing page for an agile tech startup. Ideal for landing pages, modern websites. AI-ready template.
+- Construtivismo Literário Experimental: Design an artistic and experimental constructivist landing page for an independent book publisher. Ideal for landing pages, modern websites. AI-ready template.
+- Conversion-Optimized: Conversion-optimized landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Coquette: Coquette landing page with soft romantic pastels and delicate feminine aesthetics. Ideal for branding de boutiques, editoriais femininos, embalagens de beleza e moda, convites. AI-ready template.
+- Coral: Coral — Cream and coral on near-black, set in oversized Bebas Neue. Bebas Neue typography. near-black canvas, warm cream paper for content, and a saturated coral accent th. Best for fashion / beauty pitch, fitness brand, F&B brand deck. AI-ready design system.
+- Cordel Digital: Brazilian cordel literature style landing page. Ideal for landing pages culturais, projetos nordestinos, sites artísticos. AI-ready template.
+- Corporate Radial Process: Corporate landing page, radial process visualization, clean white background, teal accent, structured layout, flat design. Ideal for landing pages, modern websites. AI-ready template.
+- Creative Mode: Creative Mode — Cream paper canvas with confident multi-color (green, pink, orange, yellow) accents and Archivo Black display. Archivo Black typography. warm cream paper background with a saturated multi-accent palette (forest green,. Best for creative agency pitch, design studio deck, ad shop credentials. AI-ready design system.
+- Creative Voltage: Bold, creative, energetic landing page with retro-modern vibes. Ideal for creative agencies, estúdios de música, marcas jovens, eventos culturais. AI-ready template.
+- Criatividade Artesanal e Pessoal: Personal and creative hand-drawn landing page for a small business creative consulting firm. Ideal for landing pages, modern websites. AI-ready template.
+- CRM Copper Sand: Modern CRM landing + dashboard-style UI using Geist font, a warm copper primary color (#C08532), and a soft neutral background (#F2F1ED). Ideal for plataformas crm, painéis de vendas, ferramentas de gestão comercial, dashboards saas. AI-ready template.
+- Crypto Exchange Plataforma: Crypto exchange landing, digital assets, charts, neon cyan, dark background, futuristic, security, wallets, trading. Ideal for landing pages, modern websites. AI-ready template.
+- Culinária Afetiva Brasileira: Warm and authentic landing page for a homemade and affective recipe sharing platform, inspired by Brazilian vernacular culture. Ideal for landing pages, saas. AI-ready template.
+- Cursor Warm Gothic: Cursor-inspired warm landing page. Ideal for editores de código ai, ferramentas developer, ides inteligentes, plataformas de coding. AI-ready template.
+- Cyber Core: Cyber core landing page with neon-lit, high-speed digital aesthetics. Ideal for marcas de gaming, design de pôsteres, branding digital edgy, portfólios tech. AI-ready template.
+- Cyber-Tribal: Cyber-tribal landing page. Ideal for landing pages, saas. AI-ready template.
+- Cyberpunk Dark Mode Flow: Cyberpunk dark mode landing page, sleek flow design, neon blue accents, circuit patterns, modern dark ui, tech aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Cyberpunk Neon Noir: Cyberpunk landing page, neon noir style, dark background, glowing neon colors, glitch effects, futuristic ui, high contrast. Ideal for landing pages, modern websites. AI-ready template.
+- Cyberpunk UI: Cyberpunk interface. Ideal for landing pages, saas. AI-ready template.
+- Daisy Days: Daisy Days — Cheerful pastel deck with hand-drawn daisies, stars, and rainbows. Friendly, soft, and warm. Fredoka One typography. warm cream base with a full pastel rainbow (mint, lavender, peach, sky, soft pin. Best for education / classroom, kids product launch, wellness program. AI-ready design system.
+- Dark Botanical: Design an elegant, sophisticated dark landing page with artistic premium feel. Ideal for marcas de luxo, joalherias, spas premium, art galleries, vinícolas. AI-ready template.
+- Dark Glassmorphism Infographic: Dark glassmorphism infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Dark Mode (OLED): Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Ideal for dashboards financeiros, apps criativas, mobile-first, gaming. AI-ready template.
+- Dark Portfolio Hero: Dark portfolio with animated loading screen (2.7s): counter 000→100 via rAF, rotating words with AnimatePresence, gradient progress bar (#89AACC to #4E85BF) with glow. Ideal for portfólios de desenvolvedores, designers criativos, freelancers fullstack, sites pessoais premium. AI-ready template.
+- Dark SaaS Hero with Liquid Glass: Dark SaaS landing page hero section. Ideal for b2b saas, ai tools, plataformas de desenvolvedores, landing pages tech, startups, apis e sdks. AI-ready template.
+- Data-Dense Dashboard: Data-dense dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Datacore SaaS Hero: Linear-style dark SaaS hero with HLS background video and black overlay (bg-black/60). Ideal for plataformas de dados, ferramentas de infraestrutura, redes e networking, saas enterprise. AI-ready template.
+- De Stijl Abstrato: De Stijl abstract landing page. Ideal for landing pages, saas. AI-ready template.
+- Degraded Colorful / Vibrant Gradient: Vibrant gradient infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Democratized Fancy Animations: Visually stunning landing page with democratized fancy animations using CSS and lightweight WebGL-inspired effects. Ideal for landing pages premium, portfolios criativos, lancamentos de produto tech, agencias digitais, experiencias imersivas, showcases de design. AI-ready template.
+- Denim and Industrial Craft: Denim style landing, jeans texture background, gold stitching, industrial craft, textile aesthetic, rugged design. Ideal for landing pages, modern websites. AI-ready template.
+- Desenho à Mão Lúdico: Playful and organic hand-drawn landing page for a children's illustrator blog. Ideal for landing pages, modern websites. AI-ready template.
+- Design Autoral Robusto: Design an authentic and robust landing page for an online store of authorial Brazilian design products, inspired by Sérgio Rodrigues. Ideal for landing pages, saas. AI-ready template.
+- Dimensional Layering: Design with dimensional layering. Ideal for landing pages, saas. AI-ready template.
+- Doodle / Sketch Livre: Doodle sketch infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Drill-Down Analytics: Drill-down analytics dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- E-Ink / Paper: Design an e-ink/paper style interface. Ideal for landing pages, saas. AI-ready template.
+- Earthy & Organic: Design an earthy and organic interface with 60/30/10 palette discipline. Ideal for design de embalagens, marcas orgânicas, cosméticos naturais, alimentos artesanais, produtos eco-friendly. AI-ready template.
+- Editorial Contemporâneo: Design an artistic and immersive editorial landing page for a contemporary culture and art digital magazine. Ideal for landing pages, modern websites. AI-ready template.
+- Editorial de Portfólio Criativo: Design an artistic and visual editorial landing page for a graphic design portfolio. Ideal for landing pages, modern websites. AI-ready template.
+- Editorial de Viagem Sofisticado: Design an elegant and aspirational editorial landing page for a luxury travel blog. Ideal for landing pages, modern websites. AI-ready template.
+- Editorial Grid / Magazine: Design an editorial magazine layout. Ideal for landing pages, saas. AI-ready template.
+- Editorial Interativo Digital: Design an engaging and informative editorial landing page for an interactive digital book. Ideal for landing pages, modern websites. AI-ready template.
+- Editorial Investigativo Sóbrio: Serious and informative editorial landing page for an investigative journalism platform. Ideal for landing pages, modern websites. AI-ready template.
+- Editorial Tri-Tone: Editorial Tri-Tone — Three-color editorial system: dusty pink, mustard cream, and deep burgundy, set in Bricolage + Instrument Serif. Bricolage Grotesque typography. dusty pink, mustard cream, and deep burgundy used as full-bleed color blocks. Best for editorial / magazine pitch, fashion brand deck, lifestyle media. AI-ready design system.
+- EdTech Plataforma de Cursos: Edtech landing, online courses, gamification, progress badges, vibrant colors, students, learning path, challenges, modern UI. Ideal for landing pages, modern websites. AI-ready template.
+- Electric Studio: Bold, clean professional landing page with a two-panel vertical split layout. Ideal for estúdios de design, digital agencies, portfolios profissionais, consultorias. AI-ready template.
+- Elementos Musicais: Musical elements infographic. Ideal for landing pages, modern websites. AI-ready template.
+- ElevenLabs Ethereal Voice: Design an ElevenLabs-inspired ethereal landing page. Ideal for voice ai, plataformas de áudio, text-to-speech, ferramentas de mídia. AI-ready template.
+- Ember & Amethyst Premium: Vibrant, bold, and luxurious UI that fuses fiery warmth with regal depth. Ideal for marcas de moda premium, gastronomia autoral, entretenimento e eventos, vinícolas e destilarias, creative agencies. AI-ready template.
+- Engineering Blueprint Schematic: Engineering landing page, blueprint style, schematic design, technical precision, dark blue background, cyan lines, industrial aesthetic, wireframe graphics. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Computação de Alta Performance: Powerful and technical landing page for new server processors. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Dados Empresariais: Robust and secure landing page for an Autonomous Database. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Ecossistema Digital: Dynamic and social landing page for a gaming and social platform. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Elegância Espacial: Minimalist premium landing page for a spatial computing device. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Elegância Fintech: Clean and professional landing page for a payment platform. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Entretenimento Imersivo: Cinematic and engaging landing page for a new interactive series. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Experiência de Compra Contínua: Functional and trustworthy landing page for a premium subscription service. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Fluxo de Rede: Robust and connected landing page for network solutions. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Futuro Autônomo: Sleek and futuristic landing page for a new autonomous car. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de IA Criativa: Design an artistic and innovative landing page for a creative AI tool. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de IA Ética: Clean and trustworthy landing page for a safe conversational AI. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de IA para Negócios: Professional and data-driven landing page for a sales AI platform. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Inovação em Dispositivos Móveis: Sleek and modern landing page for a new foldable smartphone. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Inteligência Generativa: Futuristic and minimalist landing page for a next-gen language model. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Litografia de Precisão: Precise and industrial landing page for EUV technology. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Realidade Virtual Social: Design an immersive and futuristic landing page for a new metaverse space. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo de Tecnologia de Precisão: Precise and industrial landing page for 2nm chips. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Deep Learning High-Tech: High-tech AI platform landing page. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Fluent AI: Clean and professional landing page for an AI assistant. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Material AI: Clean and vibrant landing page for a generative AI platform. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Suíço Artístico: Design an artistic and clean Swiss Style landing page for a modern art gallery. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Suíço Científico: Design an academic and precise Swiss Style landing page for an online scientific publication. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Suíço Corporativo: Clean and professional Swiss Style landing page for a corporate IT consulting firm. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Suíço Educacional: Design an educational and structured Swiss Style landing page for an online course platform. Ideal for landing pages, modern websites. AI-ready template.
+- Estilo Suíço Premium: Design an elegant and minimalist Swiss Style landing page for a premium product brand. Ideal for landing pages, modern websites. AI-ready template.
+- Ethereal: Design an ethereal landing page with extremely soft, delicate tones. Ideal for lookbooks de alta-costura, arte conceitual, designs refinados, portfólios artísticos. AI-ready template.
+- Exaggerated Minimalism: Design with exaggerated minimalism. Ideal for landing pages, saas. AI-ready template.
+- Executive Dashboard: Design an executive dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Expo Luminous Developer: Design an Expo-inspired luminous developer landing page. Ideal for plataformas cross-platform, react native, sdks mobile, ferramentas de build. AI-ready template.
+- Farmhouse / Cottage Core: Farmhouse/cottage core landing page with rustic countryside charm. Ideal for decoração de interiores, marcas de vestuário boutique, capas de livros, produtos artesanais. AI-ready template.
+- Feature-Rich Showcase: Feature showcase landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Figma Vibrant Monochrome: Figma-inspired landing page with strictly black-and-white interface chrome. Ideal for ferramentas de design, plataformas criativas, editores visuais, portfolios de design. AI-ready template.
+- Filigree: Filigree-inspired landing page with intricate lace-like patterns. Ideal for convites de casamento, tipografia sofisticada, embalagens de luxo, joalherias. AI-ready template.
+- Financial Dashboard: Financial dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- FinTech Plataforma Financeira: Fintech landing, finance dashboard, charts, security, gold and dark palette, premium, trust, transactions, cards, modern UI. Ideal for landing pages, modern websites. AI-ready template.
+- Fitness App de Treinos: Fitness app landing, workouts, before-after, progress tracking, red and orange, energetic, mobile app, gym, health. Ideal for landing pages, modern websites. AI-ready template.
+- Flat Design: Flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Ideal for landing pages, saas. AI-ready template.
+- Flat Design Corporativo: Corporate flat design landing page. Ideal for landing pages, saas. AI-ready template.
+- Flat Design Educacional Vibrante: Design an engaging and interactive flat design landing page for an e-learning platform. Ideal for landing pages, modern websites. AI-ready template.
+- Flat Design Financeiro Seguro: Secure and efficient flat design landing page for a personal finance management app. Ideal for landing pages, modern websites. AI-ready template.
+- Flat Design Informativo Claro: Clear and informative flat design landing page for a news and articles platform. Ideal for landing pages, modern websites. AI-ready template.
+- Flat Design Musical Intuitivo: Design an intuitive and modern flat design landing page for a music streaming service. Ideal for landing pages, modern websites. AI-ready template.
+- Flat Design Produtivo: Simple and efficient flat design landing page for a task management app. Ideal for landing pages, modern websites. AI-ready template.
+- Fractal Bioluminescence: Fractal landing page, bioluminescent design, glowing organic shapes, dark background, electric purple and green, intricate geometry. Ideal for landing pages, modern websites. AI-ready template.
+- Framelix 3D Studios: Cinematic 3D studio page with pure black background. Ideal for estúdios 3d, agências de motion design, produtoras de vídeo, portfólios de animação. AI-ready template.
+- Fraunces Typography: Render a 2D isolated text on a solid background. Ideal for branding and logos, headlines, hero sections, and editorial layouts.. AI-ready template.
+- Futuristic UI Glassmorphism: Glassmorphism landing page, futuristic glass ui, transparent panels, blur effects, glowing edges, dark background, 3d interface. Ideal for landing pages, modern websites. AI-ready template.
+- Gatsby Art Deco Noir: Art deco landing page, great gatsby style, black and gold luxury, geometric patterns, ornate borders, elegant typography, noir aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Gen Z Chaos / Maximalism: Gen Z chaos maximalist interface. Ideal for landing pages, saas. AI-ready template.
+- Geometric: Geometric patterns infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Ghibli-Inspired Narrative Map: Ghibli style landing page, watercolor background, narrative map, whimsical design, soft colors, hand painted look, nature inspired. Ideal for landing pages, modern websites. AI-ready template.
+- Glass Gradient Creative: Full-screen hero page with a vertical white-to-magenta gradient background, overlapping blurred triangular shapes in purple and pink, and tall glass columns using glassmorphism. Ideal for landing pages criativas, portfólios de design, digital agencies, produtos visuais premium. AI-ready template.
+- Glassmorphism: Glassmorphic interface with frosted glass effect. Ideal for overlays, modal dialogs, card components, premium interfaces. AI-ready template.
+- Glassmorphism Agency Hero: Dark agency hero with HLS video using mix-blend-screen. Ideal for digital agencies, estúdios criativos, consultorias de design, portfólios de agência. AI-ready template.
+- Glitch UI Dystopian Terminal: Glitch ui landing page, dystopian terminal, red alert style, digital interference, chaotic design, scanlines, warning aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Google Sans Typography: Render a 2D isolated text on a solid background. Ideal for product and marketing sites that want a clean, big tech aesthetic.. AI-ready template.
+- Gothic: Gothic landing page with dark, mysterious, cathedral-inspired aesthetics. Ideal for merchandising de bandas, logótipos provocadores, branding vintage dark, moda gótica. AI-ready template.
+- Gótico Moderno: Modern gothic landing page. Ideal for landing pages, saas. AI-ready template.
+- Grade School Color Palette: Landing page using grade school primary colors — the kind you remember from crayons and traffic signs. Ideal for startups consumer, apps educacionais, ecommerce jovem, plataformas de comunidade, marketing de produto, food delivery. AI-ready template.
+- Gradient Aurora Borealis: Gradient aurora borealis infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Gradient Mesh / Aurora Evolved: Design with gradient mesh aurora effect. Ideal for landing pages, saas. AI-ready template.
+- Graffiti: Graffiti-inspired landing page with bright spray-paint colors on gritty urban backgrounds. Ideal for campanhas de marcas provocadoras, pôsteres de música, linhas de streetwear, eventos urbanos. AI-ready template.
+- Grove: Grove — Forest-green canvas with cream type, classical Playfair serifs, and a single rust accent. Playfair Display typography. deep forest green canvas with warm bone type and a single rust-red accent. Best for sustainability brand, wellness brand, outdoor / nature product. AI-ready design system.
+- Grunge Rock dos Anos 90: 90s grunge rock landing page. Ideal for landing pages, saas. AI-ready template.
+- Hacker Aesthetic CRT/CLI: Hacker style landing page, terminal ui, crt monitor effect, green text on black, ascii art, command line interface, retro coding. Ideal for landing pages, modern websites. AI-ready template.
+- Hand-Drawn Sketch-Note: Hand drawn landing page, notebook paper background, sketch style, doodles, handwriting font, casual and fun design. Ideal for landing pages, modern websites. AI-ready template.
+- Happy Art Tropical: Happy Art tropical landing page with vibrant saturated colors. Ideal for landing pages, saas. AI-ready template.
+- HashiCorp Infra Dual: HashiCorp-inspired infrastructure landing page. Ideal for infraestrutura cloud, devops, automação de infraestrutura, plataformas multi-produto. AI-ready template.
+- HealthTech Plataforma Clínica: Healthtech landing, medical icons, clinic portal, healthcare green, patient journey, appointments, doctors, trust, clean, accessible, digital health. Ideal for landing pages, modern websites. AI-ready template.
+- Heat Map & Heatmap Style: Heatmap visualization. Ideal for landing pages, modern websites. AI-ready template.
+- Helios Design System (HashiCorp): Highly structured and technical enterprise UI inspired by HashiCorp Helios. Ideal for ferramentas devops, saas técnico, dashboards de infraestrutura, plataformas open-source, painéis de engenharia. AI-ready template.
+- Hero-Centric Design: Hero-centric landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- High-Contrast Tech: High-contrast tech interface with strict 60/30/10 color distribution. Ideal for ux/ui de produto digital, dashboards analytics, saas platforms, conteúdo tecnológico, apps b2b. AI-ready template.
+- Holographic Data-Viz: Holographic landing page, data visualization style, futuristic hud, 3d floating elements, glowing blue interface, sci-fi aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Horror / Gothic Dark: Horror gothic dark interface. Ideal for landing pages, saas. AI-ready template.
+- HR SaaS Hero: Minimalist white SaaS hero with background video vertically flipped scaleY(-1) and white gradient overlay (transparent at 26.4% to white at 66.9%). Ideal for saas de rh, gestão de equipes remotas, ferramentas de colaboração, plataformas de onboarding. AI-ready template.
+- HUD / Sci-Fi FUI: Futuristic HUD (Heads Up Display) or FUI. Ideal for landing pages, saas. AI-ready template.
+- IBM Carbon Enterprise: Design an IBM Carbon-inspired enterprise landing page. Ideal for enterprise, infraestrutura cloud, plataformas corporativas, consultoria tech. AI-ready template.
+- IBM Plex Sans Typography: Render a 2D isolated text on a solid background. Ideal for enterprise products, design systems, documentation, and tech brands.. AI-ready template.
+- Inclusive Design: Design for universal accessibility: high contrast (7:1+), large text (16px+), keyboard-only navigation, screen reader optimization, WCAG AAA compliance, symbol-based color indicators (not color-only), haptic feedback, voice interaction support, reduced motion options. Ideal for landing pages, saas. AI-ready template.
+- Industrial Workbench Schematic: Industrial workbench landing, garage style, workshop aesthetic, metal textures, tools background, rugger design, hardware focus. Ideal for landing pages, modern websites. AI-ready template.
+- Inter Typography: Render a 2D isolated text on a solid background. Ideal for apps, dashboards, documentation, digital product needing maximum clarity.. AI-ready template.
+- Interactive Cursor Design: Design with interactive cursor effects. Ideal for landing pages, saas. AI-ready template.
+- Interactive Product Demo: Design an interactive demo landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Internet Nostalgia Y2K Revival: Landing page with full Windows 95/98 internet nostalgia aesthetic. Ideal for portfolios criativos retro, jogos indie, eventos tematicos, blogs pessoais nostalgicos, lancamentos de produto ironicos, comunidades de nicho. AI-ready template.
+- Isometric Gaming / Voxel: Design an isometric voxel gaming interface. Ideal for landing pages, saas. AI-ready template.
+- Japandi: Japandi landing page blending Japanese minimalism with Scandinavian warmth. Ideal for interior design, produtos lifestyle, branding minimalista, design de pôsteres. AI-ready template.
+- Kawaii: Kawaii landing page with soft pastel colors and adorable rounded aesthetics. Ideal for embalagens de brinquedos, vestuário, branding de personagens, gráficos de redes sociais. AI-ready template.
+- Kawaii / Sweet Pastel: Kawaii sweet pastel interface. Ideal for landing pages, saas. AI-ready template.
+- Kawaii Doodle Art: Kawaii doodle art style landing page. Ideal for projetos infantis, lojas de presentes, apps de bem-estar, fan sites, blogs criativos. AI-ready template.
+- Kawaii Pastel Pop: Kawaii landing page, pastel pink background, cute aesthetic, soft shapes, sparkles, japanese pop culture, fluffy clouds. Ideal for landing pages, modern websites. AI-ready template.
+- Kinetic Typography: Design with kinetic typography. Ideal for landing pages, saas. AI-ready template.
+- Kitsch: Kitsch landing page with intentionally bright, exaggerated, over-the-top aesthetics. Ideal for branding satírico, produtos de novidade, autocolantes, campanhas de marketing exageradas. AI-ready template.
+- Knolling Pastel Flat Lay: Knolling landing page, flat lay style, organized objects, pastel background, clean 90 degree alignment, overhead photography look. Ideal for landing pages, modern websites. AI-ready template.
+- Kraken Purple Exchange: Kraken-inspired crypto exchange landing page. Ideal for exchanges crypto, trading, plataformas financeiras, defi. AI-ready template.
+- Lambe-Lambe Brasileiro: Brazilian lambe-lambe street poster style landing page. Ideal for landing pages, saas. AI-ready template.
+- Laranja Queimado Premium: Warm, earthy, and elegant UI with a premium feel. Ideal for marcas orgânicas, cafeterias premium, produtos artesanais, restaurantes farm-to-table, lifestyle natural. AI-ready template.
+- Linear Precision Dark: Precision-engineered dark landing page inspired by Linear. Ideal for ferramentas de gestão de projetos, saas developer, plataformas de engenharia, issue trackers. AI-ready template.
+- Liquid Glass: Premium liquid glass effect with morphing shapes, flowing animations, chromatic aberration, iridescent gradients, smooth 400-600ms transitions. Ideal for landing pages, saas. AI-ready template.
+- Locomotive Infinite Scroll: Design an immersive infinite scroll landing page inspired by Locomotive Scroll v5 and Lenis. Ideal for landing pages imersivas, storytelling digital, portfolios criativos, sites de agências, apresentações de produto premium, one-page narrativas. AI-ready template.
+- Logoisum Video Agency Hero: Premium video agency hero with full-screen video no color overlay. Ideal for agências de vídeo, produtoras de reels e shorts, estúdios de edição, freelancers de vídeo. AI-ready template.
+- Lovable Cream Humanist: Lovable-inspired warm landing page. Ideal for ai builders, ferramentas no-code, plataformas amigáveis, dev tools approachable. AI-ready template.
+- Luxury & Elegant: Luxury and elegant interface with strict 60/30/10 color hierarchy. Ideal for branding de luxo, hotéis e hospitalidade premium, moda high-end, joalheria, serviços financeiros exclusivos. AI-ready template.
+- Luxury Typography: Luxury typography-focused landing page where type IS the design. Ideal for moda haute couture, embalagens premium, streetwear de luxo, capas de revistas. AI-ready template.
+- Manga Instructional Comic: Manga style landing page, black and white comic, speed lines, dynamic panels, ink aesthetic, instructional comic design. Ideal for landing pages, modern websites. AI-ready template.
+- Manrope Typography: Render a 2D isolated text on a solid background. Ideal for digital products and interfaces, branding for tech, saas, and contemporary lifestyle companies.. AI-ready template.
+- Maracatu Tech: Maracatu percussion-inspired tech landing page. Ideal for landing pages culturais, projetos afro-brasileiros, sites energéticos. AI-ready template.
+- Mat: Mat — Dark sage canvas with bone paper and burnt-orange accent; mid-century modern with wood undertones. Bricolage Grotesque typography. muted sage green canvas with warm bone paper and a saturated burnt-orange accent. Best for design studio credentials, architecture / interior brand, ceramics or craft brand. AI-ready design system.
+- Memphis: Memphis-style landing page with vibrant bold colors, geometric shapes (triangles, circles, squiggles), postmodern 80s aesthetic. Ideal for branding retro, peças editoriais, embalagens funky, campanhas jovens. AI-ready template.
+- Memphis Design: Memphis style interface. Ideal for landing pages, saas. AI-ready template.
+- Merriweather Typography: Render a 2D isolated text on a solid background. Ideal for blogs, news sites, long-form reading, and editorial platforms.. AI-ready template.
+- Micro-interactions: Design with delightful micro-interactions: small 50-100ms animations, gesture-based responses, tactile feedback, loading spinners, success/error states, subtle hover effects, haptic feedback triggers for mobile. Ideal for landing pages, saas. AI-ready template.
+- Micro-Sound UX: Multisensory landing page with micro-sound UX integration. Ideal for apps de produtividade premium, plataformas de musica, interfaces de gaming, dashboards interativos, experiencias imersivas, ferramentas criativas. AI-ready template.
+- Mid-Century Modern: Mid-century modern landing page with clean lines, organic curves and muted vibrant colors from the 1950s. Ideal for branding de móveis, layouts de pôsteres retro, decoração de interiores, produtos lifestyle. AI-ready template.
+- Midnight Garden Premium: Create an elegant, premium UI with a nocturnal botanical garden atmosphere. Ideal for marcas sustentáveis premium, jardins botânicos, cosméticos naturais, wellness de luxo, resorts ecológicos. AI-ready template.
+- Mini World: Miniature world / diorama-style landing page. Ideal for games indie, educação infantil, projetos criativos, portfólios lúdicos. AI-ready template.
+- Minimal & Direct: Minimal direct landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Minimalism & Swiss Style: Minimalist landing page. Ideal for b2b saas, enterprise apps, design saas, professional tools. AI-ready template.
+- Minimalismo Chic de Luxo: Design an elegant and minimalist luxury fashion e-commerce landing page. Ideal for landing pages, modern websites. AI-ready template.
+- Minimalismo Confiável Financeiro: Professional and trustworthy minimalist landing page for a financial consulting firm. Ideal for landing pages, modern websites. AI-ready template.
+- Minimalismo Fotográfico Elegante: Design an elegant and minimalist photography portfolio landing page. Ideal for landing pages, modern websites. AI-ready template.
+- Minimalismo Funcional B2B: Clean and professional minimalist landing page for a B2B project management platform. Ideal for landing pages, modern websites. AI-ready template.
+- Minimalismo Sereno de Bem-Estar: Calm and minimalist landing page for a meditation and wellness app. Ideal for landing pages, modern websites. AI-ready template.
+- Minimalist React Hero with Motion: Minimalist, high-end React hero section using Tailwind CSS v4 and the Motion library. Ideal for saas landing pages, ferramentas de gestão remota, startups premium, produtos digitais high-end. AI-ready template.
+- MiniMax Colorful Cards: MiniMax-inspired landing page with white canvas and colorful product cards. Ideal for plataformas de ia multi-modelo, galerias de ai, produtos consumer ai, showcases de tecnologia. AI-ready template.
+- Mintlify Green Docs: Mintlify-inspired documentation landing page. Ideal for documentação, developer portals, plataformas de docs, knowledge bases. AI-ready template.
+- Mistral Golden Amber: Mistral AI-inspired golden landing page. Ideal for ia europeia, marcas de luxo, plataformas premium, tecnologia francesa. AI-ready template.
+- Mixed Media: Mixed media landing page combining collage, painting and photography aesthetics. Ideal for spreads de revistas, capas de álbuns, publicidade criativa, portfólios artísticos. AI-ready template.
+- Mixed Reality / VR-AR: Mixed reality VR/AR infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Modern Minimalist: Modern minimalist landing page with strict 60/30/10 color balance. Ideal for design de logos minimalistas, landing pages corporativas, sites institucionais clean, produtos saas premium. AI-ready template.
+- Modernismo Jornalístico Brasileiro: Structured and dynamic landing page for a Brazilian cultural news portal, inspired by modernism and azulejaria. Ideal for landing pages, saas. AI-ready template.
+- MongoDB Forest Neon: MongoDB-inspired forest-dark landing page. Ideal for databases, infraestrutura de dados, plataformas developer, apis de dados. AI-ready template.
+- Monochrome: Monochrome — Ivory ledger paper with all-black type; Lora serif headlines, Jost body, no color at all. Lora typography. ivory and pale-cream paper with deep ink-black type only. Best for user research synthesis, white paper, longform report. AI-ready design system.
+- Motion-Driven: Build an animation-heavy interface with scroll-triggered animations, microinteractions, parallax scrolling (3-5 layers), smooth transitions (300-400ms), entrance animations, page transitions. Ideal for landing pages, saas. AI-ready template.
+- Mystical Western: Mystical western landing page blending classic cowboy desert aesthetics with cosmic spiritual vibes. Ideal for pôsteres de festivais de música, marcas de vestuário indie, branding espiritual, eventos temáticos. AI-ready template.
+- Nature Distilled: Design with nature distilled aesthetic. Ideal for landing pages, saas. AI-ready template.
+- Natureza / Elementos Botânicos: Nature botanical infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Neo-Grid Bold: Neo-Grid Bold — Editorial neo-brutalism with a single neon yellow accent on off-white paper. Space Grotesk typography. off-white paper background, ink black, signature neon yellow accent used sparing. Best for product launch, design review, founder pitch. AI-ready design system.
+- Neobrutalismo Crítico: Direct and bold neobrutalist landing page for a social and political critique blog. Ideal for landing pages, modern websites. AI-ready template.
+- Neobrutalismo Ousado: Bold and provocative neobrutalist landing page for a disruptive design agency. Ideal for landing pages, modern websites. AI-ready template.
+- Neoclassical Art: Neoclassical landing page inspired by ancient Greek and Roman art. Ideal for marcas de luxo, interior design, art galleries, projetos formais e institucionais. AI-ready template.
+- Neon Cyber: Futuristic, techy, confident landing page with neon cyber aesthetic. Ideal for plataformas gaming, startups tech, apps de criptomoeda, eventos de tecnologia. AI-ready template.
+- Neubrutalism: Neubrutalist interface. Ideal for landing pages, saas. AI-ready template.
+- Neumorphic Tech Schematic: Neumorphic landing page, soft ui, tech schematic, light background, soft shadows, clean layout, hub and spoke design. Ideal for landing pages, modern websites. AI-ready template.
+- Neumorphism: Neumorphic UI with soft 3D effects. Ideal for modern apps, dashboards, health/fitness, productivity. AI-ready template.
+- New Era Automotive Hero: Design an automotive hero with full-viewport video (min 600px, max 965px). Ideal for concessionárias de carros, marketplaces automotivos, marcas de veículos, landing pages de lançamento. AI-ready template.
+- New Era Bold Hero: Bold cinematic hero with full-screen background video and dark blue fallback. Ideal for creative agencies, portfólios impactantes, landing pages editoriais, marcas de moda. AI-ready template.
+- Noir Detetive: Noir detective landing page. Ideal for landing pages, saas. AI-ready template.
+- Notebook Tabs: Design an editorial, organized landing page that looks like a notebook. Ideal for blogs editoriais, digital magazines, portfolios criativos, educational platforms. AI-ready template.
+- Notion Warm Workspace: Notion-inspired warm workspace landing page. Ideal for ferramentas de produtividade, workspaces colaborativos, gestão de conhecimento, wikis. AI-ready template.
+- NVIDIA Power Green: Design an NVIDIA-inspired high-contrast landing page. Ideal for gpu computing, hardware, tecnologia de alto desempenho, data centers, gaming. AI-ready template.
+- Ollama Pure Grayscale: Radically minimal Ollama-inspired landing page. Ideal for ferramentas cli, open-source, plataformas developer minimalistas, modelos de ia local. AI-ready template.
+- OpenCode Terminal Mono: Design an OpenCode-inspired terminal-native landing page. Ideal for agentes de código ai, clis, ferramentas open-source, editores de terminal. AI-ready template.
+- Organic Biophilic: Biophilic organic interface. Ideal for landing pages, saas. AI-ready template.
+- Origami Geométrico: Design an origami geometric landing page. Ideal for landing pages, saas. AI-ready template.
+- Paper & Ink: Design an editorial, literary, thoughtful landing page with paper and ink aesthetic. Ideal for editoras, blogs literários, revistas culturais, portfolios de escritores. AI-ready template.
+- Parallax Storytelling: Parallax storytelling page. Ideal for landing pages, saas. AI-ready template.
+- Passport Travel UI: Passport style landing page, travel document aesthetic, ink stamps, visa stickers, paper texture, official look, travel theme. Ideal for landing pages, modern websites. AI-ready template.
+- Pastel Geometry: Friendly, organized, modern landing page with pastel geometry. Ideal for apps de produtividade, educational platforms, saas friendly, health apps. AI-ready template.
+- PCB Schematic Architecture: PCB design landing, circuit board style, electronics aesthetic, green and copper palette, connecting traces, chip outlines, technical precision. Ideal for landing pages, modern websites. AI-ready template.
+- People's Platform (Block & Bold): People's Platform (Block & Bold) — Activist poster energy: blue, orange, red on cream, with Alfa Slab + Caveat Brush. Alfa Slab One typography. saturated political-poster palette: cobalt blue, signal orange, warning red, on . Best for cultural commentary, manifesto, community / civic deck. AI-ready design system.
+- Pin & Paper: Pin & Paper — Yellow paper with safety-pin illustrations, ink-blue handwritten Caveat, paper-grain texture. Caveat typography. saturated yellow paper, soft cream alternate, deep ink-blue type, plus rust red,. Best for research findings with personality, qualitative report, founder reflection. AI-ready design system.
+- Pink Script — After Hours: Pink Script — After Hours — Black canvas, hot pink accent, pearl-cream paper, Instrument Serif headlines: late-night editorial luxury. Instrument Serif typography. near-black canvas with one saturated hot pink accent and a pearl-cream paper for. Best for fashion brand deck, creator personal brand, after-hours product (nightlife / dating / spirits). AI-ready design system.
+- Pinterest Warm Discovery: Pinterest-inspired warm discovery landing page. Ideal for marketplaces visuais, galerias de inspiração, plataformas de descoberta, e-commerce visual. AI-ready template.
+- Pixel Art: Pixel art inspired interface. Ideal for landing pages, saas. AI-ready template.
+- Pixel Art 8-bit: Pixel art 8-bit landing page with retro gaming aesthetics. Ideal for jogos indie, marketing retro, designs nostálgicos, portfólios de desenvolvedores de games. AI-ready template.
+- Playful: Playful — Sun-warm peach background with Syne display: a friendly indie launch deck. Syne typography. warm peach / sand backgrounds with ink-black structure and lighter cream cards. Best for creator portfolio, indie product launch, lifestyle brand. AI-ready design system.
+- Pointillism / Stipple Art: Pointillism/stipple art landing page where visual texture is created through thousands of tiny dots. Ideal for ilustrações editoriais, embalagens artísticas, marcas com margem artística, pôsteres. AI-ready template.
+- Pop Art: Pop Art landing page with extremely saturated bold colors and comic-strip aesthetics. Ideal for branding lúdico, design de vestuário, embalagens icônicas, capas editoriais. AI-ready template.
+- Portfolio Dev Full-Stack: Developer portfolio, full-stack, projects gallery, clean layout, minimal, dark and cyan, code, tech stack, personal brand. Ideal for landing pages, modern websites. AI-ready template.
+- Predictive Analytics: Predictive analytics dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Psicodélico Anos 60: 60s psychedelic landing page. Ideal for landing pages, saas. AI-ready template.
+- Radial Diagram / Donut Chart: Radial donut chart infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Raw Grid: Raw Grid — Neo-brutalist deck with thick borders, offset shadows, and a pink/sage/ink palette. Segoe UI / system-ui typography. white background with ink-black structure, soft pink and sage green as flat colo. Best for startup pitch, accelerator demo day, founder pitch. AI-ready design system.
+- Real Estate Imobiliária Digital: Real estate landing, property cards, listings, luxury, gold and beige, modern, maps, filters, home search. Ideal for landing pages, modern websites. AI-ready template.
+- Real-Time Monitoring: Real-time monitoring dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Replicate Blaze Gallery: Replicate-inspired explosive landing page. Ideal for plataformas de modelos ai, apis de ml, comunidades developer, marketplaces de ai. AI-ready template.
+- Resend Frost Cinematic: Resend-inspired cinematic dark landing page. Ideal for apis de email, infraestrutura developer, saas técnico, plataformas de comunicação. AI-ready template.
+- Resume Journey Oregon Trail: Career resume landing page in Oregon Trail retro game style. Ideal for currículos criativos, portfólios de desenvolvedores, páginas pessoais, apresentações de carreira. AI-ready template.
+- Retro Arcade Pixelado: Nostalgic and playful retro landing page for an online classic arcade. Ideal for landing pages, modern websites. AI-ready template.
+- Retro Aventura Anos 70: Nostalgic and adventurous retro landing page for a 70s-style travel blog. Ideal for landing pages, modern websites. AI-ready template.
+- Retro Barbershop Clássica: Classic and masculine retro landing page for a barbershop. Ideal for landing pages, modern websites. AI-ready template.
+- Retro Boutique Vintage: Nostalgic and elegant retro landing page for a vintage clothing store. Ideal for landing pages, modern websites. AI-ready template.
+- Retro Digital Anos 90: Nostalgic and playful retro landing page for a 90s-style digital marketing agency. Ideal for landing pages, modern websites. AI-ready template.
+- Retro Travel Poster: Retro travel poster interface. Ideal for landing pages, saas. AI-ready template.
+- Retro Windows: Retro Windows — Windows 95 chrome: gray title bars, MS Sans Serif, pixel typography, full nostalgia. Press Start 2P typography. Windows 95 system palette: 3D-button gray, navy title bars, pixel-perfect inset/. Best for retro gaming pitch, Y2K brand, creator portfolio (90s aesthetic). AI-ready design system.
+- Retro Zine: Retro Zine — Beige paper with green accent and Bebas Neue + Caveat: a riso-printed zine in HTML form. Bebas Neue typography. warm beige / khaki paper with one saturated forest green. Best for indie zine / publication, music or arts brand, creator portfolio. AI-ready design system.
+- Retro-Comic Action Blueprint: Retro comic landing page, superhero style, pop art, halftone dots, speech bubbles, bold black outlines, bright primary colors. Ideal for landing pages, modern websites. AI-ready template.
+- Retro-Futurism: Retro-futuristic (cyberpunk/vaporwave) interface with neon colors (blue, pink, cyan), deep black background, 80s aesthetic, CRT scanlines, glitch effects, neon glow text/borders, monospace fonts, geometric patterns. Ideal for landing pages, saas. AI-ready template.
+- Reuso Criativo Disruptivo: Design an innovative and playful landing page for a creative reuse and upcycling platform, inspired by Irmãos Campana. Ideal for landing pages, saas. AI-ready template.
+- Revolut Billboard Fintech: Revolut-inspired billboard fintech landing page. Ideal for banking digital, fintechs, plataformas financeiras, neobanks. AI-ready template.
+- Risograph / Retro-Pop: Risograph retro-pop interface. Ideal for landing pages, saas. AI-ready template.
+- Risograph Zine Aesthetic: Risograph landing page, zine aesthetics, grainy texture, multiply blending mode, retro print style, bright pink and blue ink. Ideal for landing pages, modern websites. AI-ready template.
+- Rococó Delicado: Delicate Rococo landing page. Ideal for landing pages, saas. AI-ready template.
+- Rococo Romantic Narrative: Rococo landing page, romantic style, pastel colors, gold accents, floral decorations, soft and dreamy, ornate luxury. Ideal for landing pages, modern websites. AI-ready template.
+- Roxo Veludo Real: Luxurious and sophisticated UI with a royal feel. Ideal for marcas de luxo, joalherias, moda premium, hotéis boutique, eventos exclusivos. AI-ready template.
+- Runway Cinematic Editorial: Runway-inspired cinematic editorial landing page. Ideal for ai criativa, geração de vídeo, plataformas de mídia, estúdios de produção. AI-ready template.
+- SaaS Enterprise Analytics: SaaS landing, analytics dashboard, metrics cards, corporate blue, b2b, business intelligence, charts, integrations, trust, clean UI, glassmorphism, data visualization. Ideal for landing pages, modern websites. AI-ready template.
+- SaaS Signature Gradient: Design the quintessential SaaS/AI startup landing page with THE signature tech gradient. Ideal for startups saas, ai tools, plataformas de desenvolvedores, landing pages tech, produtos b2b modernos, apis e sdks. AI-ready template.
+- Sakura / Floral Japonês: Sakura floral Japanese infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Sakura Chroma: Sakura Chroma — Vintage Japanese cassette-package aesthetic: cream paper, diagonal rainbow ribbons, condensed bold type, JIS-style spec checkboxes. Big Shoulders Display typography. warm cream paper canvas with dark warm-brown ink and a six-colour primary palett. Best for product launch or catalogue, indie hardware or analog studio brand, music label or release schedule. AI-ready design system.
+- Sales Intelligence Dashboard: Sales intelligence dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Sanity Neon Structured: Sanity-inspired nocturnal CMS landing page. Ideal for cms headless, plataformas de conteúdo estruturado, ferramentas de dados, apis de conteúdo. AI-ready template.
+- Scatterbrain: Scatterbrain — Post-it inspired: pastel sticky notes, Caveat handwriting, Shrikhand and Zilla Slab type stack. Shrikhand typography. off-white paper with a full pastel sticky-note palette (yellow, blue, pink, gree. Best for brainstorm / workshop, creative agency credentials, design-thinking session. AI-ready design system.
+- Scrapbook / Collage: Scrapbook/collage landing page with analog handmade tactile aesthetics. Ideal for diários pessoais, convites de casamento, vision boards, publicações acolhedoras em redes sociais. AI-ready template.
+- Sentry Purple Debugger: Sentry-inspired dark purple developer landing page. Ideal for monitoramento de erros, devops, ferramentas developer, observabilidade. AI-ready template.
+- Shabby Chic: Shabby chic landing page with faded pastel tones and vintage romance. Ideal for convites de casamento, embalagens acolhedoras, marcas nostálgicas, decoração de interiores. AI-ready template.
+- Signal: Signal — Deep navy canvas with bone paper and a single muted-gold accent; institutional with quiet weight. Source Serif 4 typography. deep navy primary with warm bone paper alternate and a single muted-gold accent. Best for investor deck, consulting deliverable, board presentation. AI-ready design system.
+- Símbolos Ambientais Brasileiros: Design an urgent and informative landing page for an Amazon preservation campaign, inspired by Brazilian graphic symbolism. Ideal for landing pages, saas. AI-ready template.
+- Símbolos Cívicos Brasileiros: Design an informative and symbolic landing page for a civic education platform, inspired by Aloísio Magalhães' graphic identity. Ideal for landing pages, saas. AI-ready template.
+- Símbolos Culturais Brasileiros: Design an authentic and engaging landing page for a Brazilian cultural tourism platform, inspired by graphic symbolism. Ideal for landing pages, saas. AI-ready template.
+- Símbolos Políticos Brasileiros: Design an informative and authoritative landing page for a Brazilian political news and analysis platform, inspired by graphic symbolism. Ideal for landing pages, saas. AI-ready template.
+- Símbolos Regionais Brasileiros: Design an authentic and diverse landing page for an online store of Brazilian regional products, inspired by graphic symbolism and regional identity. Ideal for landing pages, saas. AI-ready template.
+- Skeuomorphism: Realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Ideal for landing pages, saas. AI-ready template.
+- Social Proof-Focused: Social proof landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Soft Editorial: Soft Editorial — Cormorant Garamond serif on warm paper with sage, blush, and lemon accents. Cormorant Garamond typography. warm paper canvas with deep ink type, accented by soft pink, lemon, blush, and s. Best for editorial feature, longform brand story, gallery or museum. AI-ready design system.
+- Soft Maximalism: Soft maximalist landing page with CONTROLLED CHAOS energy. Ideal for marcas jovens, agencias criativas, lancamentos de produto, portfolios ousados, eventos e festivais. AI-ready template.
+- Soft UI Evolution: Design evolved neumorphism with improved contrast (WCAG AA+), modern aesthetics, subtle depth, accessibility focus. Ideal for landing pages, saas. AI-ready template.
+- Solarpunk Utópico: Solarpunk utopian landing page. Ideal for landing pages, saas. AI-ready template.
+- Space Grotesk Typography: Render a 2D isolated text on a solid background. Ideal for developer tools, web3/crypto, tech startups, and data-driven interfaces.. AI-ready template.
+- Spaceship Instruction Manual: Landing page that looks like a spaceship instruction manual or engineering blueprint. Ideal for produtos de hardware, startups deep-tech, apis e ferramentas dev, plataformas de engenharia, documentacao tecnica, cybersecurity. AI-ready template.
+- SpaceX Cinematic Void: SpaceX-inspired cinematic void landing page. Ideal for aeroespacial, tecnologia espacial, marcas futuristas, engenharia avançada. AI-ready template.
+- Spatial UI (VisionOS): VisionOS-style spatial interface. Ideal for landing pages, saas. AI-ready template.
+- Split Pastel: Playful, modern, friendly landing page with split pastel background. Ideal for apps criativos, plataformas de design, startups friendly, ecommerce lifestyle. AI-ready template.
+- Spotify Dark Immersive: Spotify-inspired dark immersive landing page. Ideal for streaming de música, plataformas de áudio, podcasts, entretenimento digital. AI-ready template.
+- Steampunk: Steampunk landing page fusing Victorian elegance with steam-powered mechanical aesthetics. Ideal for capas de livros de fantasia, merchandise temático, gráficos de videojogos, eventos cosplay. AI-ready template.
+- Steampunk Industrial: Steampunk industrial interface. Ideal for landing pages, saas. AI-ready template.
+- Steampunk Nebula Explorer: Steampunk space landing page, nebula background, brass and copper gears, vintage sci-fi aesthetic, explorer style, cosmic industrial. Ideal for landing pages, modern websites. AI-ready template.
+- Steampunk Vitoriano: Victorian steampunk landing page. Ideal for landing pages, saas. AI-ready template.
+- Stencil & Tablet: Stencil & Tablet — Bone paper with stencil-cut headlines and a six-color earth palette: archaeology meets brand. Bowlby One typography. warm bone and paper neutrals with a saturated earthy palette (sienna, magenta, o. Best for museum / cultural institution, art / architecture brand, longform research. AI-ready design system.
+- Storytelling-Driven: Storytelling landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Stripe Fintech Elegance: Stripe-inspired fintech landing page. Ideal for fintechs, plataformas de pagamento, infraestrutura financeira, saas enterprise. AI-ready template.
+- Studio: Studio — Black canvas with electric-yellow type; high-voltage design studio aesthetic. Barlow typography. near-black canvas with one signature electric-yellow that doubles as foreground . Best for design studio credentials, creative agency pitch, brand showcase. AI-ready design system.
+- Studygram / Notebook Kawaii: Studygram notebook kawaii interface. Ideal for landing pages, saas. AI-ready template.
+- Sumi-e Tech Scroll: Sumi-e style landing, ink wash painting, rice paper texture, red seal accent, isometric tech details, east asian aesthetic. Ideal for landing pages, modern websites. AI-ready template.
+- Supabase Dark Emerald: Dark-mode-native developer landing page inspired by Supabase. Ideal for plataformas developer, ferramentas open-source, bancos de dados, apis. AI-ready template.
+- Surrealism: Surrealist landing page that defies logic and reality. Ideal for capas de álbuns, ilustrações editoriais conceituais, digital art, campanhas criativas. AI-ready template.
+- Swiss Design Gráfico: Swiss graphic design landing page. Ideal for landing pages, saas. AI-ready template.
+- Swiss Modern: Clean, precise, Bauhaus-inspired landing page with Swiss Modern aesthetic. Ideal for agências de design, architecture, art galleries, portfolios minimalistas. AI-ready template.
+- Swiss Modernism 2.0: Design with Swiss Modernism 2.0. Ideal for landing pages, saas. AI-ready template.
+- Synapse Dark Hero: Pure black SaaS hero with HLS video at 100% opacity no overlay, positioned at height 80vh and absolute bottom-[35vh]. Ideal for saas de inovação, plataformas de ai, ferramentas enterprise, startups de tecnologia. AI-ready template.
+- Syne Typography: Render a 2D isolated text on a solid background. Ideal for cultural institutions, creative studios, posters, and edgy editorial layouts.. AI-ready template.
+- Synthwave: Synthwave landing page with dramatic neon sunset gradients and retro-futuristic 80s aesthetics. Ideal for capas de álbuns, promoções de marca, visuais neon, eventos de música eletrônica. AI-ready template.
+- Tactile 3D Neumorphism: Tactile 3D neumorphic interface with inflated, puffy shapes that look extruded from the background. Ideal for modern apps, dashboards, premium interfaces, produtos digitais, fintech. AI-ready template.
+- Tactile Digital / Deformable UI: Tactile deformable interface. Ideal for landing pages, saas. AI-ready template.
+- Targo Logistics Hero: Logistics hero with full-screen video 100% opacity no overlay. Ideal for empresas de logística, transportadoras, frotas corporativas, serviços de entrega premium. AI-ready template.
+- Taskora SaaS Hero: Dark SaaS hero with background video at opacity-50 and gradient overlay fading to background color. Ideal for produtos saas, plataformas de gestão de projetos, ferramentas de produtividade, dashboards analíticos. AI-ready template.
+- Tenebrism: Tenebrism-inspired landing page with extreme contrast between light and deep darkness. Ideal for pôsteres atmosféricos, flyers de eventos, spreads editoriais, embalagens premium. AI-ready template.
+- Tenor Sans Typography: Render a 2D isolated text on a solid background. Ideal for magazines, minimalist brands, and content-heavy layouts with a sophisticated tone.. AI-ready template.
+- Terminal Green: Developer-focused, hacker aesthetic landing page. Ideal for portfolios de desenvolvedores, ferramentas cli, plataformas devops, technical documentation. AI-ready template.
+- Terracota Mediterrâneo: Mediterranean terracotta landing page. Ideal for landing pages, saas. AI-ready template.
+- The Barely-There UI: Design an ultra-minimal AI-native interface inspired by OpenAI and Perplexity. Ideal for plataformas de ia, saas b2b enterprise, dashboards analiticos, ferramentas de produtividade, interfaces de dados. AI-ready template.
+- Thermal Insight Tech: Thermal imaging landing page, heat map aesthetic, infrared colors, dark tech background, spectrum gradient, technical analysis. Ideal for landing pages, modern websites. AI-ready template.
+- Timeline Horizontal Corporativo: Horizontal corporate timeline. Ideal for landing pages, modern websites. AI-ready template.
+- Together Pastel Cloud: Together AI-inspired pastel cloud landing page. Ideal for infraestrutura ai, cloud computing, plataformas de modelos, gpu clusters. AI-ready template.
+- Travel Plataforma de Viagens: Travel landing, destinations, packages, maps, booking, adventure, blue and accent color, trips, flights, hotels. Ideal for landing pages, modern websites. AI-ready template.
+- Tropicalismo Aventureiro Natural: Design an adventurous and natural landing page for an ecotourism travel agency in Brazil, inspired by tropicalism. Ideal for landing pages, saas. AI-ready template.
+- Tropicalismo Gastronômico Vibrante: Vibrant and flavorful landing page for a Brazilian gastronomy festival, inspired by tropicalism. Ideal for landing pages, saas. AI-ready template.
+- Tropicalismo Indígena Autêntico: Design an authentic and cultural landing page for a Brazilian indigenous culture platform, inspired by tropicalism and indigenous art. Ideal for landing pages, saas. AI-ready template.
+- Trust & Authority: Trust-focused landing page. Ideal for marketing, conversão, lead gen. AI-ready template.
+- Uber Bold Transit: Design an Uber-inspired bold landing page. Ideal for mobilidade urbana, logistics, delivery, plataformas de transporte. AI-ready template.
+- Ukiyo-e Woodblock Revival: Ukiyo-e landing page, woodblock print style, japanese art, bold outlines, prussian blue, paper texture, traditional graphic design. Ideal for landing pages, modern websites. AI-ready template.
+- Underwater / Aquático: Design an underwater aquatic infographic. Ideal for landing pages, modern websites. AI-ready template.
+- Underwater Aquático Deep Sea: Underwater elements, aquatic life, water plants, bubbles, waves, ocean aesthetics, calming, peaceful, exploratory, marine, deep sea, layered depth, cool blue illumination, flowing liquid, underwater infographic. Ideal for landing pages, modern websites. AI-ready template.
+- User Behavior Analytics: User behavior analytics dashboard. Ideal for landing pages, modern websites. AI-ready template.
+- Utilitarian: Utilitarian landing page stripped to absolute essentials. Ideal for sinalética, interfaces industriais, etiquetas de roupa, design de embalagens informativas. AI-ready template.
+- Vaporwave: Vaporwave landing page with intense neon colors and satirical 80s/90s nostalgia. Ideal for capas de álbuns, colagens digitais, anúncios experimentais, arte de internet. AI-ready template.
+- Vaporwave: Vaporwave aesthetic interface. Ideal for landing pages, saas. AI-ready template.
+- Vaporwave Aesthetic: Vaporwave aesthetic interface. Ideal for landing pages, saas. AI-ready template.
+- Vellum: Vellum — Deep navy canvas with warm-yellow italic Cormorant serifs and a single dusty teal accent. A quiet, scholarly aesthetic. Cormorant Garamond Italic typography. deep periwinkle navy canvas with warm yellow italic-serif type and one dusty-tea. Best for research findings, white paper or longform report, academic or university deck. AI-ready design system.
+- Vercel Geist Minimal: Vercel-inspired minimal landing page. Ideal for infraestrutura developer, plataformas de deploy, ferramentas frontend, ci/cd. AI-ready template.
+- Vernacular Acolhedor Brasileiro: Design an authentic and rustic landing page for a vernacular interior design blog, inspired by Brazilian material culture. Ideal for landing pages, saas. AI-ready template.
+- Versus Mode Anime Aesthetic: Versus mode landing page, anime fighting game style, split screen design, dynamic diagonals, high contrast, hud elements. Ideal for landing pages, modern websites. AI-ready template.
+- Vertical Whiteboard Timeline: Vertical whiteboard tutorial landing page with metallic aluminum frame border (gray gradient, dual box-shadow) and decorative Expo markers at the bottom. Ideal for tutoriais passo a passo, onboarding de produto, guias educativos, how-to pages, documentacao visual, landing pages long-form. AI-ready template.
+- Vibrant & Block-based: Design an energetic, vibrant interface with bold block layouts, geometric shapes, high color contrast, large typography (32px+), animated background patterns, duotone effects. Ideal for startups, ecommerce fashion, apps gaming, marketing conversível. AI-ready template.
+- Victorian: Victorian-era landing page with extremely ornate details. Ideal for caligrafia moderna, convites temáticos, branding vintage, designs steampunk. AI-ready template.
+- Vintage Analog / Retro Film: Design with vintage analog film aesthetic. Ideal for landing pages, saas. AI-ready template.
+- Vintage Botanical / Scientific: Vintage botanical scientific interface. Ideal for landing pages, saas. AI-ready template.
+- Vintage Botanical Scientific Illustration: Vintage botanical landing page, scientific illustration style, aged paper background, plant diagram aesthetics, scholarly look, organic colors. Ideal for landing pages, modern websites. AI-ready template.
+- Vintage Editorial: Witty, confident editorial landing page with personality. Ideal for blogs premium, digital magazines, marcas artesanais, consultorias criativas. AI-ready template.
+- Vintage Lithograph / Victorian: Victorian lithograph interface. Ideal for landing pages, saas. AI-ready template.
+- Voice-First Multimodal: Voice-first multimodal interface. Ideal for landing pages, saas. AI-ready template.
+- VoltAgent Terminal Emerald: VoltAgent-inspired deep-space terminal landing page. Ideal for frameworks de agentes ai, plataformas de engenharia, ferramentas de automação, sdks. AI-ready template.
+- Voxel Gamified Isometric: Voxel landing page, isometric 3d style, gamified design, floating islands, blocky characters, colorful and friendly. Ideal for landing pages, modern websites. AI-ready template.
+- Wabi-Sabi Anti-UX: Wabi-sabi inspired landing page celebrating imperfection and human touch. Ideal for portfolios artisticos, marcas artesanais, cafeterias e restaurantes, estudio de design, blogs pessoais, produtos organicos. AI-ready template.
+- Wealth Video Hero: Premium fintech hero with full-screen looping background video scaled 150% with top-left focal point. Ideal for fintechs, plataformas de investimento, gestão patrimonial, landing pages financeiras premium. AI-ready template.
+- Web3 EOS Hero: Web3 hero with full-screen video and 50% black overlay. Ideal for projetos blockchain, plataformas web3, daos, landing pages de waitlist cripto. AI-ready template.
+- Weblex Dark Hero: Dark hero with full-screen video with seamless loop transition via requestAnimationFrame opacity. Ideal for website builders, plataformas no-code, ferramentas de criação de sites, landing pages de produto. AI-ready template.
+- Whiteboard: Whiteboard-style landing page that looks like a collaborative brainstorming session. Ideal for brainstorming, education, ferramentas colaborativas, startups, apresentações. AI-ready template.
+- Whiteboard Flowchart: Whiteboard-style landing page with metallic aluminum frame border (gray gradient with dual box-shadow). Ideal for processos e fluxogramas, onboarding e tutoriais, educacao e cursos, startups criativas, brainstorming e ideacao. AI-ready template.
+- Wise Lime Bold: Wise-inspired bold fintech landing page. Ideal for transferências internacionais, fintechs, plataformas de pagamento, câmbio. AI-ready template.
+- xAI Brutalist Monospace: Design an xAI-inspired dark brutalist landing page. Ideal for labs de ia, pesquisa, plataformas técnicas, infraestrutura de modelos. AI-ready template.
+- Y2K: Y2K landing page with vibrant neon colors and early 2000s tech optimism. Ideal for editoriais de moda, colagens digitais, campanhas de streetwear, social networks. AI-ready template.
+- Y2K Aesthetic: Y2K aesthetic interface. Ideal for landing pages, saas. AI-ready template.
+- Z-Shape: Z-shape infographic with characters. Ideal for landing pages, modern websites. AI-ready template.
+- Zapier Warm Automation: Zapier-inspired warm automation landing page. Ideal for automação, integrações, plataformas de workflow, ferramentas no-code. AI-ready template.
+- Zero Interface: Voice-first, gesture-based, AI-driven interface with minimal visible UI, progressive disclosure, voice recognition UI, gesture detection, AI predictions, smart suggestions, context-aware actions. Ideal for landing pages, saas. AI-ready template.
+
+## Guides
+- Claude Code: config file CLAUDE.md, Siga as regras visuais de @DESIGN.md
+- Cursor: config file .cursor/rules/*.mdc, Include do DESIGN.md
+- Kiro: config file .kiro/steering/, Copiar DESIGN.md para steering
+- Windsurf: config file .windsurfrules, Referenciar DESIGN.md
+- Google Stitch: config file UI nativa, Import direto
+
+## Blog
+- How to Use DESIGN.md with Cursor — Complete Setup Guide: Configure DESIGN.md in Cursor for consistent AI-generated UI. Step-by-step setup with .cursorrules integration and practical examples.
+- How to Create a DESIGN.md from Scratch: Step-by-step guide to writing a DESIGN.md file for your project. Define colors, typography, spacing and components in Markdown for AI agents.
+
+## Related
+- github.com/google-labs-code/design.md — Official specification
+- skill.dev.br — AI agent skills marketplace (SKILL.md modules)
+- ft.ia.br — Author
