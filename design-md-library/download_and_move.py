@@ -3,8 +3,8 @@ import re
 import subprocess
 import time
 
-md_file = '/Users/fatima/Desktop/awesome_design/design-md-library/elementos_designmd.md'
-base_dir = '/Users/fatima/Desktop/awesome_design/design-md-library'
+md_file = 'elementos_designmd.md'
+base_dir = '/design-md-library'
 target_dir = os.path.join(base_dir, '454')
 
 with open(md_file, 'r') as f:

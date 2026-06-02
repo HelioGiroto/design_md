@@ -11,7 +11,8 @@ except ImportError:
     exit(1)
 
 # Caminho do arquivo
-md_file = '/Users/fatima/Desktop/awesome_design/design-md-library/elementos_designmd.md'
+md_file = 'elementos_designmd.md'
+VISITADOS_FILE = 'visitados.txt'
 
 # ==============================================================================
 # CONFIGURAÇÃO DE COMO CLICAR NO BOTÃO (ESCOLHA OPÇÃO 1 OU OPÇÃO 2)
@@ -20,9 +21,10 @@ md_file = '/Users/fatima/Desktop/awesome_design/design-md-library/elementos_desi
 # OPÇÃO 1: Coordenadas Fixas da Tela (Mais fácil, rápida e confiável)
 # Para descobrir essas coordenadas, coloque o mouse em cima do seu favorito 
 # e rode este comando num terminal: python3 -c "import pyautogui; print(pyautogui.position())"
-USAR_COORDENADAS = True
-BOTAO_X = 350  # <-- Mude para o valor X do seu mouse
-BOTAO_Y = 100  # <-- Mude para o valor Y do seu mouse
+# OPÇÃO 1: Coordenadas Fixas da Tela (desativada — usando imagem)
+# BOTAO_X = 350
+# BOTAO_Y = 100
+USAR_COORDENADAS = False
 
 # OPÇÃO 2: Reconhecimento de Imagem (Requer salvar um print do botão)
 # Se USAR_COORDENADAS for False, o script vai procurar essa imagem na tela.
@@ -45,14 +47,28 @@ for line in lines:
         if match:
             urls.append(match.group(1))
 
-print(f"Foram encontradas {len(urls)} URLs.")
+# Carrega URLs já visitadas para retomar de onde parou
+visitadas = set()
+if os.path.exists(VISITADOS_FILE):
+    with open(VISITADOS_FILE, 'r') as f:
+        visitadas = set(line.strip() for line in f if line.strip())
+    print(f"{len(visitadas)} URLs já processadas (lido de {VISITADOS_FILE}).")
+
+urls_pendentes = [u for u in urls if u not in visitadas]
+print(f"Total: {len(urls)} URLs. Pendentes: {len(urls_pendentes)}. Já visitadas: {len(visitadas)}.")
 print("AVISO: Deixe o seu navegador visível e na mesma posição.")
-print("Iniciando em 5 segundos... (Para parar a qualquer momento, arraste o mouse rapidamente para qualquer um dos 4 cantos da tela!)")
+print("Iniciando em 5 segundos...")
+print()
+print("⚠️  BOTÃO DE EMERGÊNCIA DO PYAUTOGUI:")
+print("Se o script começar a clicar em coisas erradas ou abrir abas infinitas e você perder")
+print("o controle, JOGUE O MOUSE RAPIDAMENTE PARA QUALQUER UM DOS 4 CANTOS DA TELA —")
+print("o script abortará imediatamente!")
+print()
 time.sleep(5)
 
-# 2. Executa o fluxo para cada URL
-for i, url in enumerate(urls):
-    print(f"\n[{i+1}/{len(urls)}] Abrindo página: {url}")
+# 2. Executa o fluxo para cada URL pendente
+for i, url in enumerate(urls_pendentes, start=1):
+    print(f"\n[{i}/{len(urls_pendentes)}] Abrindo página: {url}")
     
     # Abre a URL em uma nova aba do navegador padrão
     webbrowser.open_new_tab(url)
@@ -63,11 +79,13 @@ for i, url in enumerate(urls):
     time.sleep(tempo_espera)
     
     # 3. Clica no Bookmarklet
+    clicou = False
     if USAR_COORDENADAS:
         # Move o mouse e clica
-        pyautogui.moveTo(BOTAO_X, BOTAO_Y, duration=0.5) # duração de meio segundo simula o humano movendo
+        pyautogui.moveTo(BOTAO_X, BOTAO_Y, duration=0.5)
         pyautogui.click()
         print(f"Clicado nas coordenadas ({BOTAO_X}, {BOTAO_Y})")
+        clicou = True
     else:
         try:
             # Procura a imagem do botão na tela
@@ -76,10 +94,16 @@ for i, url in enumerate(urls):
                 pyautogui.moveTo(posicao.x, posicao.y, duration=0.5)
                 pyautogui.click()
                 print("Clicado via reconhecimento de imagem!")
+                clicou = True
             else:
                 print("ERRO: Não encontrei a imagem do botão na tela.")
         except Exception as e:
             print(f"Erro ao procurar a imagem: {e}. (Verifique se instalou o opencv-python)")
+
+    if clicou:
+        with open(VISITADOS_FILE, 'a') as f:
+            f.write(url + '\n')
+        print(f"✓ URL registrada em {VISITADOS_FILE}")
 
     # Pequena pausa antes de abrir a próxima URL para dar tempo do download iniciar
     time.sleep(2)
